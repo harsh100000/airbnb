@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Successful</title>
+    <link rel="stylesheet" href="/output.css" />
+</head>
+<body>
+    <h1 class="text-5xl font-extrabold text-center mb-10 text-red-800">Home registered successfully</h1>
+    <h2 id="housename" class="text-2xl text-center mb-4">House Name: </h2>
+    <h2 id="location" class="text-2xl text-center mb-4">Location: </h2>
+    <div class="text-center">
+        <a href="/" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Go To Home</a>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById('housename').textContent = 'House Name: ' + params.get('housename');
+            document.getElementById('location').textContent = 'Location: ' + params.get('location');
+        }
+    </script>
+</body>
+</html>
